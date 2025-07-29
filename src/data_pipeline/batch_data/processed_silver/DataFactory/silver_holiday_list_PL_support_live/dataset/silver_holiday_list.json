@@ -1,0 +1,42 @@
+{
+    "name": "silver_holiday_list",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzurePostgreSql",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "AzurePostgreSqlTable",
+        "schema": [
+            {
+                "name": "date",
+                "type": "character varying",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "seq",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "date_kind",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "date_name",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            }
+        ],
+        "typeProperties": {
+            "schema": "silver",
+            "table": "silver_holiday_list"
+        }
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}

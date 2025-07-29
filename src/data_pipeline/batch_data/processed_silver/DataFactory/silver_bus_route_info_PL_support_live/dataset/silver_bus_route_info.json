@@ -1,0 +1,126 @@
+{
+    "name": "silver_bus_route_info",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzurePostgreSql",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "AzurePostgreSqlTable",
+        "schema": [
+            {
+                "name": "area",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "bus_number",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "to_airport_first",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "to_airport_last",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t1_end_first",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t2_end_first",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t1_end_last",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t2_end_last",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "adult_fare",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "bus_class",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "company_name",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t1_weekday_schedule",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t1_weekend_schedule",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t2_weekday_schedule",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t2_weekend_schedule",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "route_info",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t1_ride_location",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "t2_ride_location",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            }
+        ],
+        "typeProperties": {
+            "schema": "silver",
+            "table": "silver_bus_route_info"
+        }
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}

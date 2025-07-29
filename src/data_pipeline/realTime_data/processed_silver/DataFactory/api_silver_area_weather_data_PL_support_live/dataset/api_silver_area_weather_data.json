@@ -1,0 +1,126 @@
+{
+    "name": "api_silver_area_weather_data",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzurePostgreSql",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "AzurePostgreSqlTable",
+        "schema": [
+            {
+                "name": "timestamp",
+                "type": "character varying",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "year",
+                "type": "character varying",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "month",
+                "type": "character varying",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "day",
+                "type": "character varying",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "time",
+                "type": "character varying",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "observ_date",
+                "type": "character varying",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "observ_time",
+                "type": "character varying",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "temperature",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "dew_point_temperature",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "qnh",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "mean_wind_speed",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "max_wind_speed",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "mean_wind_direction",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "wind_counter_clock_direction",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "wind_clock_direction",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "horizontal_visibility",
+                "type": "int4range",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "clouds",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "change_indicator",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            }
+        ],
+        "typeProperties": {
+            "schema": "silver",
+            "table": "api_silver_area_weather_data"
+        }
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}

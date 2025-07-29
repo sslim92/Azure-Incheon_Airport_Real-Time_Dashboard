@@ -1,0 +1,93 @@
+{
+    "name": "silver_bus_route_info_DF",
+    "properties": {
+        "type": "MappingDataFlow",
+        "typeProperties": {
+            "sources": [
+                {
+                    "dataset": {
+                        "referenceName": "bronze_bus_route_info",
+                        "type": "DatasetReference"
+                    },
+                    "name": "LoadBusInfo"
+                }
+            ],
+            "sinks": [
+                {
+                    "dataset": {
+                        "referenceName": "silver_bus_route_info",
+                        "type": "DatasetReference"
+                    },
+                    "name": "SinkBusInfo"
+                }
+            ],
+            "transformations": [
+                {
+                    "name": "filter1"
+                },
+                {
+                    "name": "derivedColumn1",
+                    "description": "모든 열의 null을 -로 대체"
+                }
+            ],
+            "scriptLines": [
+                "source(output(",
+                "          area as string,",
+                "          bus_number as string,",
+                "          to_airport_first as string,",
+                "          to_airport_last as string,",
+                "          t1_end_first as string,",
+                "          t2_end_first as string,",
+                "          t1_end_last as string,",
+                "          t2_end_last as string,",
+                "          adult_fare as string,",
+                "          bus_class as string,",
+                "          company_name as string,",
+                "          t1_weekday_schedule as string,",
+                "          t1_weekend_schedule as string,",
+                "          t2_weekday_schedule as string,",
+                "          t2_weekend_schedule as string,",
+                "          route_info as string,",
+                "          t1_ride_location as string,",
+                "          t2_ride_location as string",
+                "     ),",
+                "     allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     isolationLevel: 'READ_UNCOMMITTED',",
+                "     format: 'table') ~> LoadBusInfo",
+                "LoadBusInfo filter(!isNull(bus_number)) ~> filter1",
+                "filter1 derive(each(match(type=='string'), $$ = iif(isNull($$), '-', $$))) ~> derivedColumn1",
+                "derivedColumn1 sink(allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     input(",
+                "          area as string,",
+                "          bus_number as string,",
+                "          to_airport_first as string,",
+                "          to_airport_last as string,",
+                "          t1_end_first as string,",
+                "          t2_end_first as string,",
+                "          t1_end_last as string,",
+                "          t2_end_last as string,",
+                "          adult_fare as string,",
+                "          bus_class as string,",
+                "          company_name as string,",
+                "          t1_weekday_schedule as string,",
+                "          t1_weekend_schedule as string,",
+                "          t2_weekday_schedule as string,",
+                "          t2_weekend_schedule as string,",
+                "          route_info as string,",
+                "          t1_ride_location as string,",
+                "          t2_ride_location as string",
+                "     ),",
+                "     deletable:false,",
+                "     insertable:true,",
+                "     updateable:false,",
+                "     upsertable:false,",
+                "     truncate:true,",
+                "     format: 'table',",
+                "     skipDuplicateMapInputs: true,",
+                "     skipDuplicateMapOutputs: true) ~> SinkBusInfo"
+            ]
+        }
+    }
+}

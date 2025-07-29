@@ -1,0 +1,132 @@
+{
+    "name": "api_bronze_area_weather_data",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzurePostgreSql",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "AzurePostgreSqlTable",
+        "schema": [
+            {
+                "name": "timestamp",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "date",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "time",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "report_type",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "raw_text",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "station_type",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "status",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "permissible_usage",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "temperature",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "dew_point_temperature",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "qnh",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "mean_wind_speed",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "max_wind_speed",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "mean_wind_direction",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "wind_counter_clock_direction",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "wind_clock_direction",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "horizontal_visibility",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "clouds",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            },
+            {
+                "name": "change_indicator",
+                "type": "text",
+                "precision": 0,
+                "scale": 0
+            }
+        ],
+        "typeProperties": {
+            "schema": "bronze",
+            "table": "api_bronze_area_weather_data"
+        }
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}

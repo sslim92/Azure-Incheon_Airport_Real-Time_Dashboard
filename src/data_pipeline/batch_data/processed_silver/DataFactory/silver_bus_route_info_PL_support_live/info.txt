@@ -1,0 +1,6 @@
+selected resource name:		silver_bus_route_info_PL
+selected resource type:		pipeline
+공장 name:			1dt-2nd-team1-dataFactory
+공장 location:		koreacentral
+subscription id:		27db5ec6-d206-4028-b5e1-6004dca5eeef
+time of download (UTC):		Thu, 24 Jul 2025 10:47:39 GMT
